@@ -1,0 +1,24 @@
+ DOCKERIZING THE PYTHON APPLICATION
+    # Process steps starts from 01 and continue on....
+
+      01- Install and run Docker desktop in your pc
+      
+      02- Open VS-code
+          * Create a floder on your project in yoru local pc and open that folder in VS-code
+          * Create a sub files in that your project folder
+             1- app.py
+             2- Dockerfile
+      
+      03- Write Code
+          * In app.py - print ("This is my first image")
+          * In Dockerfile - FROM python
+                            WORKDIR /app
+                            COPY /app
+                            CMD [ "python3","app.py" ]
+         -- open terminal dockerfile 
+            and enter into the python image folder by using commands
+            -- After enterning into your file enter the code : docker build -t myfirstpythonapp .
+            -- After creating docker image clear the code and and enter docker myfirstpythonapp
+               and you can see your "myfirstpythonapp"
+            -- Open your docker desktop you cam see you "Docker image " there
+         
